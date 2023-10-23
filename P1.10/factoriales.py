@@ -1,9 +1,27 @@
 def factorial(num: int):
+    if num <= 1:
+        return 1
+    total = 1
+    while (num > 1):
+        total *= num
+        num -= 1
 
-    return 24
+    return total
 
 def factorialStr(num: int):
-    return "4! => 4 x 3 x 2 x 1 = 24"
+    str_total = 1
+    str_total = str_total*num
+    while num > 1:
+        
+        print(f"{num} x", end=" ")
+        num -= 1
+        str_total = str_total*num
+        str_total1 = str(str_total)
+    while num == 1 :
+        print(f"1 = {str_total}")
+        num -= 1 
 
-print("4! = " + str(factorial(4)))
-print(factorialStr())
+
+numero = int(input("Introduce un número: "))
+print(f"{numero}! = " + str(factorial(numero)))
+print(factorialStr(numero))
